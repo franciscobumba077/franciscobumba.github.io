@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f7f9fc;
+  line-height: 1.7;
+}
+
+.hero {
+  min-height: 88vh;
+  background: linear-gradient(135deg, #101828, #1d4ed8);
+  color: white;
+  padding: 24px 8%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  opacity: .9;
+}
+
+.links a:hover { opacity: 1; }
+
+.hero-content {
+  max-width: 850px;
+  margin: 15vh auto 0;
+  text-align: center;
+}
+
+.tag {
+  font-size: .8rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  opacity: .85;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.05;
+  margin-bottom: 25px;
+}
+
+h1 span { color: #bfdbfe; }
+
+.intro {
+  max-width: 680px;
+  margin: 0 auto 30px;
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-block;
+  background: white;
+  color: #1746b8;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.section {
+  max-width: 1050px;
+  margin: auto;
+  padding: 90px 8%;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.section p { margin-bottom: 18px; }
+
+.alt { background: #eef4ff; max-width: none; padding-left: 8%; padding-right: 8%; }
+.alt > * { max-width: 1050px; margin-left: auto; margin-right: auto; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.cards article {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.07);
+}
+
+.cards h3 { margin-bottom: 8px; }
+
+.goals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.goals div {
+  background: white;
+  padding: 22px;
+  border-left: 5px solid #2563eb;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.goals span {
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 28px;
+  background: #101828;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  nav { flex-direction: column; align-items: flex-start; }
+  .hero-content { margin-top: 10vh; text-align: left; }
+  .intro { margin-left: 0; }
+  .cards, .goals { grid-template-columns: 1fr; }
+  .links { gap: 12px; }
+}
